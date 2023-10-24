@@ -12,4 +12,21 @@
 
 # that less than 4 million part could be included in the while loop
 
-import fibonacci
+def fibonacci(n):
+    fibonacci_list = [1,2]
+    while len(fibonacci_list) < n and fibonacci_list[-1] <4000000:
+        next_number = fibonacci_list[-1] + fibonacci_list[-2]
+        fibonacci_list.append(next_number)
+    return fibonacci_list
+result = fibonacci(36)
+even_list = result[1::4]
+    
+    
+print(result, sum(even_list))
+
+#this will be needed
+#while fibonacci_list[-1] <4000000:
+#    even_list = fibonacci_list[1::4]
+#    sum(even_list)
+
+
