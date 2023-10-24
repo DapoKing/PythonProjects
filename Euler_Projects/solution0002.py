@@ -11,3 +11,5 @@
 # So I'd just need to keep adding those numbers using sum() to a list that's largest number is less than 4 million
 
 # that less than 4 million part could be included in the while loop
+
+import fibonacci
