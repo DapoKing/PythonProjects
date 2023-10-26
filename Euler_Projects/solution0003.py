@@ -8,3 +8,6 @@ print(nubers_under_100)
 
 for x in nubers_under_100:
     if x % x?? == 0:
+
+#The question said largest prime not largest factor, therefore square root the number and starting dividing it by primes smaller than the answer
+# could you start with the biggest prime smaller than it's square root?
