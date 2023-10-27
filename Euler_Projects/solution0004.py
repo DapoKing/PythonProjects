@@ -8,12 +8,13 @@
 # multiplying each 3 digit number with itself would be too long
 
 palindrome_numbers = []
-for a, b in zip(range(100, 1000), range(100, 1000)):
-    c = a * b
-    number_str = str(c)
-    if number_str == number_str[::-1]:
-        palindrome_numbers.extend([a,b,c])
-        #print(palindrome_numbers) #lol they are all strings
+for a in range(100, 1000):
+    for b in range(100, 1000):
+        c = a * b
+        number_str = str(c)
+        if number_str == number_str[::-1]:
+            palindrome_numbers.extend([a,b,c])
+            #print(palindrome_numbers) #lol they are all strings
 
 max_palindrome = max(palindrome_numbers)
 
