@@ -18,4 +18,19 @@ def generate_primes(limit):
             primes.append(number)
     return primes
 
-print(generate_primes(900000)[10001])
+print(generate_primes(120000)[10000])
+
+#his answer
+import eulerlib, itertools
+
+
+# Computers are fast, so we can implement this solution by testing each number
+# individually for primeness, instead of using the more efficient sieve of Eratosthenes.
+# 
+# The algorithm starts with an infinite stream of incrementing integers starting at 2,
+# filters them to keep only the prime numbers, drops the first 10000 items,
+# and finally returns the first item thereafter.
+def compute():
+	ans = next(itertools.islice(filter(eulerlib.is_prime, itertools.count(2)), 10000, None))
+	return str(ans)
+print(compute())
